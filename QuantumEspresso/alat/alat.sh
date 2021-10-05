@@ -30,6 +30,7 @@ cat > scf.in << EOF
     celldm(1)=$alat
     nat=2
     ntyp=1
+    nbnd=8
     ecutwfc=60.0
     occupations='fixed'
 /
