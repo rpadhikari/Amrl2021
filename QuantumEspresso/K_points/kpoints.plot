@@ -1,5 +1,5 @@
 # This gnuplot script will plot the total energy vs
-# K-points grid of cubic crystals from 4x4x4 to 32x32x32.
+# K-points grid of cubic crystals from 4x4x4 to 24x24x24.
 # Written by: Rajendra Adhikari, Department of Physics,
 # Kathmandu University, Kavre, Nepal
 # Date: 17th July, 2020
@@ -9,7 +9,7 @@
 set term postscript enhanced color 'Helvetica-Bold,16'
 set output 'kgrid.ps'
 xmin=4.0
-xmax=32.0
+xmax=24.0
 # ymin=-93.454
 # ymax=-93.450
 set xr [xmin : xmax]
