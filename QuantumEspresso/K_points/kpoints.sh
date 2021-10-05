@@ -8,7 +8,7 @@
 # please do NOT remove above copyright notice.
 
 rm -rf etot.dat stress.dat
-for m in {4..32}
+for m in {4..32..2}
   do
 cat > scf.in << EOF
 &control
