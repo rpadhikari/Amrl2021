@@ -48,9 +48,9 @@ mpirun -np 4 pw.x -nk 1 -npw 4 -inp scf.in > scf.out
 te=`grep ! scf.out | tail -1 | awk '{print $5}'`
 #ft=`grep 'l fo' scf.out|awk '{print $4}'`
 sxx=`grep -A1 'l   s' scf.out|tail -1|awk '{print $4}'`
-echo "$alat  $sxx" >> stress.dat
-echo "$alat $te" >> etot.dat
-#echo "$alat  $ft" >> force.dat
+echo "$ecut  $sxx" >> stress.dat
+echo "$ecut $te" >> etot.dat
+#echo "$ecut  $ft" >> force.dat
 mv scf.in scf$m.in
 mv scf.out scf$m.out
 done
