@@ -18,7 +18,7 @@ cat > scf.in << EOF
     restart_mode='from_scratch'
     pseudo_dir = '../pseudo'
     outdir='./'
-!    disk_io='none'
+    disk_io='none'
     tstress=.true.
     tprnfor=.true.
     etot_conv_thr=1.0d-04
