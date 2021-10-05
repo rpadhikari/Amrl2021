@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -J Latt_Opt      # Job name
-#SBATCH -p quantum       # name of partition for QE calculation
+#SBATCH -p normal       # name of partition for QE calculation
 #SBATCH -o job.%j.out    # Name of stdout output file (%j expands to jobId)
 #SBATCH -N 1             # Total number of nodes requested
 #SBATCH -n 4             # Total number of mpi tasks requested
