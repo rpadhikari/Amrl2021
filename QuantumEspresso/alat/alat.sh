@@ -47,8 +47,8 @@ K_POINTS {automatic}
 EOF
 mpirun -np 4 pw.x -nk 1 -npw 4 -inp scf.in > scf.out
 te=`grep ! scf.out | tail -1 | awk '{print $5}'`
-#ft=`grep 'l fo' scf$m.out|awk '{print $4}'`
-sxx=`grep -A1 'l   s' scf$m.out|tail -1|awk '{print $4}'`
+#ft=`grep 'l fo' scf.out|awk '{print $4}'`
+sxx=`grep -A1 'l   s' scf.out|tail -1|awk '{print $4}'`
 echo "$alat  $sxx" >> stress.dat
 echo "$alat $te" >> etot.dat
 #echo "$alat  $ft" >> force.dat
