@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # This bash script will optimize the K-points grid of 
-# cubic crystals scanning from 4 4 4 to 32 32 32 grids.
+# cubic crystals scanning from 4x4x4 to 24x24x24 grids.
 # Written by: Rajendra Adhikari, Department of Physics,
 # Kathmandu University, Kavre, Nepal
 # Date: 17th July, 2020
 # please do NOT remove above copyright notice.
 
 rm -rf etot.dat stress.dat
-for m in {4..32..2}
+for m in {4..24..2}
   do
 cat > scf.in << EOF
 &control
