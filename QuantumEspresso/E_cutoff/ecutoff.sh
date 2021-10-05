@@ -10,7 +10,7 @@
 rm -rf etot.dat stress.dat
 for m in {0..14}
   do
-    ecut=`echo "40.0+$m*5.0)" | bc -l`
+    ecut=`echo "40.0+$m*5.0" | bc -l`
 cat > scf.in << EOF
 &control
     calculation='scf'
@@ -46,8 +46,8 @@ K_POINTS {automatic}
 EOF
 mpirun -np 4 pw.x -nk 1 -npw 4 -inp scf.in > scf.out
 te=`grep ! scf.out | tail -1 | awk '{print $5}'`
-#ft=`grep 'l fo' scf.out|awk '{print $4}'`
-sxx=`grep -A1 'l   s' scf.out|tail -1|awk '{print $4}'`
+#ft=`grep 'l fo' scf.out | awk '{print $4}'`
+sxx=`grep -A1 'l   s' scf.out | tail -1 | awk '{print $4}'`
 echo "$ecut  $sxx" >> stress.dat
 echo "$ecut $te" >> etot.dat
 #echo "$ecut  $ft" >> force.dat
