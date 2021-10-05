@@ -10,12 +10,12 @@
 # set terminal type
 set term postscript enhanced color 'Helvetica-Bold,16'
 set output 'a0.ps'
-# xmin=
-# xmax=
-# ymin=
-# ymax=
-# set xr [xmin : xmax]
-# set yr [ymin : ymax]
+ xmin=10.1
+ xmax=10.55
+ ymin=-93.454
+ ymax=-93.450
+ set xr [xmin : xmax]
+ set yr [ymin : ymax]
 set xl 'alat (Bohr)'
 set yl 'Total energy (Ry)'
 set format y '%9.4f'
