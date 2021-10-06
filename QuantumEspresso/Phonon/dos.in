@@ -1,8 +1,7 @@
 &input
   asr='simple'
   amass(1)=28.085
-  flfrc='Ta.fc'
-  flfrq='Ta.freq'
+  flfrc='Si444.fc'
   dos=.true.
   fldos='phonon.dos'
   nk1=30
