@@ -1,7 +1,6 @@
 phonons of Si in Diamond structure 
 &inputph
-  tr2_ph=1.0d-14
-  prefix='pwscf'
+  tr2_ph=1.0d-12
   amass(1)=28.085
   fildyn='Si.dyn'
   outdir='./'
