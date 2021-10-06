@@ -23,7 +23,7 @@ set key top center
 # defining line styles
 set style line 1 lt 1 lw 3 pt 6 ps 2 lc rgb 'blue'
 set style line 2 lt 1 lw 2 pt 6 ps 2 lc rgb 'black'
-VBM=5.9823
+VBM=5.9823 # valance band maximum (eV)
 plot 'Si.dos' u ($1-VBM):2 w l noti ls 1
 set output
 ! ps2pdf dos.ps
