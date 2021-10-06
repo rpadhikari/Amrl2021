@@ -12,3 +12,6 @@ module load qe/6.7
 # run the calculation
 mpirun -np 16 pw.x -nk 4 -npw 4 -inp scf.in > scf.out
 mpirun -np 16 ph.x -nk 4 -npw 4 -inp ph.in > ph.out
+mpirun -np 4 q2r.x < q2r.in > q2r.out
+mpirun -np 4 matdyn.x < dos.in > dos.out
+
