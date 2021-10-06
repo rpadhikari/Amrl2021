@@ -1,0 +1,12 @@
+&input
+  asr='simple'
+  amass(1)=28.085
+  flfrc='Ta.fc'
+  flfrq='Ta.freq'
+  dos=.true.
+  fldos='phonon.dos'
+  nk1=50
+  nk2=50
+  nk3=50
+  ndos=200
+/
