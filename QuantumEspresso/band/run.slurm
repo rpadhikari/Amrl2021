@@ -12,4 +12,4 @@ module load qe/6.7
 # run the calculation
 #mpirun -np 16 pw.x -nk 4 -npw 4 -inp scf.in > scf.out
 #mpirun -np 16 pw.x -nk 4 -npw 4 -inp nscf.in > nscf.out
-mpirun -np 4 bands.x < bands.in > bands.out
+mpirun -np 4 bands.x < band.in > band.out
