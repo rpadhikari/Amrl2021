@@ -4,7 +4,7 @@
 #SBATCH -o job.%j.out    # Name of stdout output file (%j expands to jobId)
 #SBATCH -N 1             # Total number of nodes requested
 #SBATCH -n 16            # Total number of mpi tasks requested
-#SBATCH -t 06:00:00      # Run time (hh:mm:ss)
+#SBATCH -t 00:20:00      # Run time (hh:mm:ss)
 
 # load needed modules
 module load qe/6.7
