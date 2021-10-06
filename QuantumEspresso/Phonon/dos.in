@@ -5,8 +5,8 @@
   flfrq='Ta.freq'
   dos=.true.
   fldos='phonon.dos'
-  nk1=50
-  nk2=50
-  nk3=50
+  nk1=30
+  nk2=30
+  nk3=30
   ndos=200
 /
