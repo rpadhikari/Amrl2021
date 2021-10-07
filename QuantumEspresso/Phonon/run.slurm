@@ -5,7 +5,8 @@
 #SBATCH -N 1             # Total number of nodes requested
 #SBATCH -n 16            # Total number of mpi tasks requested
 #SBATCH -t 00:30:00      # Run time (hh:mm:ss)
-
+# follow this article: 
+# https://www.researchgate.net/publication/259667253_First-principles_codes_for_computational_crystallography_in_the_Quantum-ESPRESSO_package
 # load needed modules
 module load qe/6.7
 
