@@ -1,13 +1,10 @@
-&input
-  outdir='./'
-  filrc='Si444.fc'
+ &input
   asr='simple'
   amass(1)=28.085
-  fifrq='Si.freq'
-  dos=.false.
-  q_in_band_form = .true.
-  q_in_cryst_coord = .true.
-/
+  flfrc='Si444.fc'
+  flfrq='Si.freq'
+  q_in_band_form=.true.
+ /
   8
   0.000  0.000  0.000 10 ! Gamma
   0.500  0.000  0.000 14 ! X
