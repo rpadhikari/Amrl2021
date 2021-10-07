@@ -1,9 +1,9 @@
-&INPUT
+&input
   outdir='./'
-  fildyn='Si444.fc'
+  filrc='Si444.fc'
   asr='simple'
   amass(1)=28.085
-  filout='SiDynmat.out'
+  fifrq='Si.freq'
   dos=.false.
   q_in_band_form = .true.
   q_in_cryst_coord = .true.
