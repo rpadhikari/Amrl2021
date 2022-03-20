@@ -1,6 +1,7 @@
 #!/bin/bash
 # This bash script will optimize the volume of Hexagonal crystals scanning 
-# from -3 to +3 % of experimental volume. For testing case a=b=1.0 and c=4.0
+# from -3 to +3 % of experimental volume. 
+# For testing case a=b=3.2162899971 and c=5.2399621010
 # Written by: Rajendra Adhikari, Department of Physics,
 # Kathmandu University, Kavre, Nepal
 # Date: 20th March, 2022
@@ -30,15 +31,14 @@ cat > scf.in << EOF
 &system
     ibrav=4
     celldm(1)=$alat
-    nat=2
-    ntyp=1
-    nbnd=8
-    ecutwfc=60.0
+    nat=4
+    ntyp=2
+    ecutwfc=80.0
     occupations='fixed'
 /
- &electrons
-    conv_thr = 2.0d-8
-    mixing_beta = 0.7
+&electrons
+  conv_thr = 2.0d-8
+  mixing_beta = 0.7
 /
 ATOMIC_SPECIES
   Ga  28.085  Ga.upf
@@ -49,7 +49,7 @@ ATOMIC_POSITIONS {crystal}
   N   0.333333333     0.666666667     0.375880003
   V   0.666666667     0.333333333     0.875880003
 K_POINTS {automatic}
- 8 8 2 0 0 0
+ 8 8 6 0 0 0
 EOF
 mpirun -np 12 pw.x -nk 2 -npw 6 -inp scf.in > scf.out
 te=`grep ! scf.out | tail -1 | awk '{print $5}'`
