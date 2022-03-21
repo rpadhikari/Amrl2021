@@ -30,8 +30,8 @@ cat > scf.in << EOF
 /
 &system
     ibrav=4
-    a = $alat
-    c = $clat
+    a=$alat
+    c=$clat
     nat=4
     ntyp=2
     ecutwfc=80.0
@@ -43,7 +43,7 @@ cat > scf.in << EOF
 /
 ATOMIC_SPECIES
   Ga  28.085  Ga.upf
-  N   14.007  N.upd
+  N   14.007  N.upf
 ATOMIC_POSITIONS {crystal}
   Ga  0.333333333     0.666666667     0.999119997
   Ga  0.666666667     0.333333333     0.499119997
@@ -52,8 +52,8 @@ ATOMIC_POSITIONS {crystal}
 K_POINTS {automatic}
  8 8 6 0 0 0
 EOF
-#mpirun -np 12 pw.x -nk 2 -npw 6 -inp scf.in > scf.out
-pw.x < scf.in > scf.out
+mpirun -np 4 pw.x -nk 1 -npw 4 -inp scf.in > scf.out
+#pw.x < scf.in > scf.out
 te=`grep ! scf.out | tail -1 | awk '{print $5}'`
 #ft=`grep 'l fo' scf.out|awk '{print $4}'`
 #sxx=`grep -A1 'l   s' scf.out|tail -1|awk '{print $4}'`
@@ -64,4 +64,3 @@ echo "$vol $te" >> volume.dat
 mv scf.in scf$m.in
 mv scf.out scf$m.out
 done
-
