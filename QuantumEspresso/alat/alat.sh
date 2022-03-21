@@ -21,8 +21,8 @@ cat > scf.in << EOF
     disk_io='none'
     tstress=.true.
     tprnfor=.true.
-    etot_conv_thr=1.0d-04
-    forc_conv_thr=1.0d-03
+!    etot_conv_thr=1.0d-04
+!    forc_conv_thr=1.0d-03
 /
 &system
     ibrav=2
@@ -46,7 +46,7 @@ ATOMIC_POSITIONS {crystal}
 K_POINTS {automatic}
  8 8 8 1 1 1
 EOF
-mpirun -np 16 pw.x -nk 4 -npw 4 -inp scf.in > scf.out
+mpirun -np 12 pw.x -nk 2 -npw 6 -inp scf.in > scf.out
 te=`grep ! scf.out | tail -1 | awk '{print $5}'`
 #ft=`grep 'l fo' scf.out|awk '{print $4}'`
 sxx=`grep -A1 'l   s' scf.out|tail -1|awk '{print $4}'`
