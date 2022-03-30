@@ -1,4 +1,9 @@
- &projwfc
+&projwfc
     outdir='./'
+    ngauss=-1
+    degauss=0.001
     DeltaE=0.001
+    filpdos='Si'
+    filproj='proj'
  /
+
