@@ -1,0 +1,4 @@
+ &projwfc
+    outdir='./'
+    DeltaE=0.001
+ /
