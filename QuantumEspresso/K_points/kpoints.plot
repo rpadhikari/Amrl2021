@@ -9,7 +9,7 @@
 set term postscript enhanced color 'Helvetica-Bold,16'
 set output 'kgrid.ps'
 xmin=4.0
-xmax=24.0
+xmax=16.0
 # ymin=-93.454
 # ymax=-93.450
 set xr [xmin : xmax]
