@@ -13,3 +13,6 @@ module load qe/6.7
 mpirun -np 4 pw.x -nk 1 -npw 4 -inp scf.in > scf.out
 mpirun -np 4 pw.x -nk 1 -npw 4 -inp nscf.in > nscf.out
 mpirun -np 4 dos.x < dos.in > dos.out
+
+rm -rf pwscf.*
+
