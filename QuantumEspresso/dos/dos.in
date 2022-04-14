@@ -1,7 +1,7 @@
 &dos
   outdir='./'
   ngauss = -1
-  degauss = 0.005
-  DeltaE = 0.002
+  degauss = 0.0025
+  DeltaE = 0.001
   fildos = 'Si.dos'
 /
