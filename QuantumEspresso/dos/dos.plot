@@ -11,10 +11,10 @@ set term postscript enhanced color 'Helvetica-Bold,16'
 set output 'dos.ps'
 xmin=-4.0
 xmax=4.0
-# ymin=
-# ymax=
+ymin=0.0
+ymax=3.0
 set xr [xmin : xmax]
-# set yr [ymin : ymax]
+set yr [ymin : ymax]
  
 set xl 'Energy (eV)'
 set yl 'Density of States (Arb. unit)'
