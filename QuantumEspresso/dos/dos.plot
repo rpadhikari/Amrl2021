@@ -12,7 +12,7 @@ set output 'dos.ps'
 xmin=-4.0
 xmax=4.0
 ymin=0.0
-ymax=3.0
+ymax=3.5
 set xr [xmin : xmax]
 set yr [ymin : ymax]
  
